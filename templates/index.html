@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admission Prediction Form</title>
+	<style>
+		body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="number"], select, input[type="radio"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+.error-message {
+    color: red;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+	</style>
+</head>
+<body>
+	<h1>Admission Prediction Form</h1>
+	<form method="POST" action="/predict">
+		<label for="gre">GRE Score:</label>
+		<input type="number" id="gre" name="gre" required>
+		<br>
+		<label for="toefl">TOEFL Score:</label>
+		<input type="number" id="toefl" name="toefl" required>
+		<br>
+		<label for="univ_rating">University Rating:</label>
+		<input type="number" id="univ_rating" name="univ_rating" step="0.5" min="0.5" max="5" required>
+		<br>
+		<label for="sop">Statement of Purpose:</label>
+		<input type="number" id="sop" name="sop" step="0.5" min="0.5" max="5" required>
+		<br>
+		<label for="lor">Letter of Recommendation:</label>
+		<input type="number" id="lor" name="lor" step="0.5" min="0.5" max="5" required>
+		<br>
+		<label for="cgpa">CGPA:</label>
+		<input type="number" id="cgpa" name="cgpa" step="0.01" min="0" max="10" required>
+		<br>
+		<label for="research">Research Experience:</label>
+		<input type="radio" id="research_yes" name="research" value="1" required>
+		<label for="research_yes">Yes</label>
+		<input type="radio" id="research_no" name="research" value="0" required>
+		<label for="research_no">No</label>
+		<br>
+		<button type="submit">Submit</button>
+	</form>
+</body>
+</html>

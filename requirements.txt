@@ -1,0 +1,8 @@
+flask
+pandas
+numpy
+pickel
+scikit-learn
+matplotlib
+ydata_profiling
+seaborn
